@@ -1,4 +1,4 @@
-<a>https://takiwoon.github.io/FYP-SweetThooth-/SweetTooth/</a>
+<a href="url">https://takiwoon.github.io/FYP-SweetThooth-/SweetTooth/</a>
 
 这个是我们FYP的首页。
 你们先不用做东西 你们看下这个首页做到可以吗。
