@@ -1,0 +1,45 @@
+
+//header的code
+
+<script>
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+            highlightCurrentPage();
+        });
+
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+
+    function highlightCurrentPage() {
+        const path = window.location.pathname.split("/").pop();
+        let navItem = null;
+
+        switch (path) {
+            case "index.php":
+            case "":
+                navItem = document.getElementById("nav-home");
+                break;
+            case "product.php":
+                navItem = document.getElementById("nav-category");
+                break;
+            case "gallery.html":
+                navItem = document.getElementById("nav-gallery");
+                break;
+            case "about.html":
+                navItem = document.getElementById("nav-about");
+                break;
+            case "contact.html":
+                navItem = document.getElementById("nav-contact");
+                break;
+        }
+
+        if (navItem) {
+            navItem.classList.add("active");
+        }
+    }
+</script>
